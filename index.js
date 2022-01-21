@@ -1,4 +1,5 @@
 require("dotenv").config();
+const cors = require('cors');
 
 const express = require("express");
 const app = express();
@@ -15,7 +16,7 @@ const {tvShows,actionTvShows,newTvShows,getTvShow,getTvShowEpisode,getTvShowSeas
 
 /**************** Movies *******************/
 //1) all movies route
-
+app.use(cors());
 app.get("/movies", movies);
 
 //2) new movies route
